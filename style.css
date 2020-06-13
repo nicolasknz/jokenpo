@@ -49,10 +49,11 @@ img {
 
 #maquina img {
   transform: rotate(180deg);
+  
 }
 
-.user img {
-    margin-top: 3rem;
+#user img {
+    margin-top: 2rem;
 }
 
 #versus{

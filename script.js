@@ -49,6 +49,9 @@ const choice = (e) => {
 
 // Seleciona imagens
 const selectImg = (userChoice, computerChoice) => {
+  
+
+
     // Imagens  usuario
     if (userChoice === 1) {
         let userImg = document.getElementById("userImg");
@@ -76,6 +79,13 @@ const selectImg = (userChoice, computerChoice) => {
     }
 }
 
+// Limpa o conteudo 
+
+const clear = (div) => {
+    while (div.firstChild) {
+        div.removeChild(div.firstChild)
+    }
+}
 
 // Usuario clica em algum botao
 const container = document.getElementById("buttons_container");
@@ -84,10 +94,22 @@ container.addEventListener('click', function (e) {
     // Cria div a qual o texto de vitoria/derrota sera inserido
     let resultDiv = document.getElementById("resultDiv");
 
-    // Limpa a div com o resultado
-    while(resultDiv.firstChild) {
-     resultDiv.removeChild(resultDiv.firstChild);
-    }
+    // Limpa as div's com o resultado 
+    clear(resultDiv);
+
+    // "Você escolheu"  
+    const voceEscolheu = document.getElementById("voceEscolheu")
+    clear(voceEscolheu);
+    let txt = document.createElement("h2");
+    txt.textContent = "Você escolheu";
+    voceEscolheu.appendChild(txt);
+
+    // "A maquina escolheu";
+    const maquinaEscolheu = document.getElementById("maquinaEscolheu")
+    clear(maquinaEscolheu);
+    txt = document.createElement("h2");
+    txt.textContent = "A maquina escolheu";
+    maquinaEscolheu.appendChild(txt);
 
     // Gera a escolha da maquina
     let computerChoice = compChoice();
