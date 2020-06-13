@@ -121,13 +121,17 @@ container.addEventListener('click', function (e) {
     let resultado = document.createElement ("div");
     if (result === 0) {
         resultado.textContent = "Empatou";
+        resultado.classList.add("empate");
     } else if (result === 1) {
         resultado.textContent = "Parabéns você venceu";
+        resultado.classList.add("vitoria")
     } else {
         resultado.textContent = "Você perdeu";
+        resultado.classList.add("derrota");
     }
     resultDiv.appendChild(resultado);
 
+       
 
 
 })

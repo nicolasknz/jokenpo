@@ -59,3 +59,22 @@ img {
 #versus{
    margin-top: 6rem;
 }
+
+.vitoria {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+}
+.derrota {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+}
+.empate {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+}
